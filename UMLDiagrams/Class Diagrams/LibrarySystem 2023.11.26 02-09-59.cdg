@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="LibrarySystem">
+  <ClassDiagramComponents>
+    <Class name="Author" package="com.mycompany.librarysystem" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="String" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="address" type="String" visibility="private"/>
+        <Field name="birthDate" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="birthDate"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="String" name="address"/>
+        </Method>
+        <Method name="getBirthDate" returnType="String" visibility="public"/>
+        <Method name="setBirthDate" returnType="void" visibility="public">
+          <Argument type="String" name="birthDate"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Book" package="com.mycompany.librarysystem" visibility="public" isAbstract="true" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="title" type="String" visibility="private"/>
+        <Field name="author" type="Author" visibility="private"/>
+        <Field name="number" type="String" visibility="private"/>
+        <Field name="genre" type="String" visibility="private"/>
+        <Field name="version" type="String" visibility="private"/>
+        <Field name="publicationDate" type="String" visibility="private"/>
+        <Field name="isLoaned" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="title"/>
+          <Argument type="Author" name="author"/>
+          <Argument type="String" name="number"/>
+          <Argument type="String" name="genre"/>
+          <Argument type="String" name="version"/>
+          <Argument type="String" name="publicationDate"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getInfo" returnType="String" visibility="public"/>
+        <Method name="inLoan" returnType="boolean" visibility="public"/>
+        <Method name="getTitle" returnType="String" visibility="public"/>
+        <Method name="setTitle" returnType="void" visibility="public">
+          <Argument type="String" name="title"/>
+        </Method>
+        <Method name="getAuthor" returnType="Author" visibility="public"/>
+        <Method name="setAuthor" returnType="void" visibility="public">
+          <Argument type="Author" name="author"/>
+        </Method>
+        <Method name="getNumber" returnType="String" visibility="public"/>
+        <Method name="setNumber" returnType="void" visibility="public">
+          <Argument type="String" name="number"/>
+        </Method>
+        <Method name="getGenre" returnType="String" visibility="public"/>
+        <Method name="setGenre" returnType="void" visibility="public">
+          <Argument type="String" name="genre"/>
+        </Method>
+        <Method name="getVersion" returnType="String" visibility="public"/>
+        <Method name="setVersion" returnType="void" visibility="public">
+          <Argument type="String" name="version"/>
+        </Method>
+        <Method name="getPublicationDate" returnType="String" visibility="public"/>
+        <Method name="setPublicationDate" returnType="void" visibility="public">
+          <Argument type="String" name="publicationDate"/>
+        </Method>
+        <Method name="getIsLoaned" returnType="boolean" visibility="public"/>
+        <Method name="setIsLoaned" returnType="void" visibility="public">
+          <Argument type="boolean" name="isLoaned"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="Display" package="com.mycompany.librarysystem" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Methods>
+        <Method name="getInfo" returnType="String" visibility="package"/>
+        <Method name="inLoan" returnType="boolean" visibility="package"/>
+      </Methods>
+    </Interface>
+    <Class name="Journal" package="com.mycompany.librarysystem" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="conferenceName" type="String" visibility="private"/>
+        <Field name="conferenceNumber" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="title"/>
+          <Argument type="Author" name="author"/>
+          <Argument type="String" name="number"/>
+          <Argument type="String" name="genre"/>
+          <Argument type="String" name="version"/>
+          <Argument type="String" name="publicationDate"/>
+          <Argument type="String" name="conferenceName"/>
+          <Argument type="String" name="conferenceNumber"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getConferenceName" returnType="String" visibility="public"/>
+        <Method name="setConferenceName" returnType="void" visibility="public">
+          <Argument type="String" name="conferenceName"/>
+        </Method>
+        <Method name="getConferenceNumber" returnType="String" visibility="public"/>
+        <Method name="setConferenceNumber" returnType="void" visibility="public">
+          <Argument type="String" name="conferenceNumber"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Librarian" package="com.mycompany.librarysystem" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="addBook" returnType="void" visibility="package">
+          <Argument type="Book" name="book"/>
+        </Method>
+        <Method name="addStudent" returnType="void" visibility="package">
+          <Argument type="Student" name="student"/>
+        </Method>
+        <Method name="getBook" returnType="Book" visibility="package">
+          <Argument type="String" name="bookNumber"/>
+        </Method>
+        <Method name="getStudent" returnType="Student" visibility="package">
+          <Argument type="String" name="studentId"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="LibrarySystem" package="com.mycompany.librarysystem" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="librarian" type="Librarian" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="scanner" type="Scanner" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="showMenu" returnType="void" visibility="private" isStatic="true"/>
+        <Method name="addBook" returnType="void" visibility="private" isStatic="true"/>
+        <Method name="addStudent" returnType="void" visibility="private" isStatic="true"/>
+        <Method name="borrowBook" returnType="void" visibility="private" isStatic="true"/>
+        <Method name="returnBook" returnType="void" visibility="private" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="Loan" package="com.mycompany.librarysystem" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="book" type="Book" visibility="private"/>
+        <Field name="dueDate" type="LocalDate" visibility="private"/>
+        <Field name="isReturned" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Book" name="book"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="markAsReturned" returnType="void" visibility="public"/>
+        <Method name="getBook" returnType="Book" visibility="public"/>
+        <Method name="setBook" returnType="void" visibility="public">
+          <Argument type="Book" name="book"/>
+        </Method>
+        <Method name="getDueDate" returnType="LocalDate" visibility="public"/>
+        <Method name="setDueDate" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="dueDate"/>
+        </Method>
+        <Method name="isReturned" returnType="boolean" visibility="public"/>
+        <Method name="setIsReturned" returnType="void" visibility="public">
+          <Argument type="boolean" name="isReturned"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Magazine" package="com.mycompany.librarysystem" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="issueNumber" type="String" visibility="private"/>
+        <Field name="releaseDate" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="title"/>
+          <Argument type="Author" name="author"/>
+          <Argument type="String" name="number"/>
+          <Argument type="String" name="genre"/>
+          <Argument type="String" name="version"/>
+          <Argument type="String" name="publicationDate"/>
+          <Argument type="String" name="issueNumber"/>
+          <Argument type="String" name="releaseDate"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getIssueNumber" returnType="String" visibility="public"/>
+        <Method name="setIssueNumber" returnType="void" visibility="public">
+          <Argument type="String" name="issueNumber"/>
+        </Method>
+        <Method name="getReleaseDate" returnType="String" visibility="public"/>
+        <Method name="setReleaseDate" returnType="void" visibility="public">
+          <Argument type="String" name="releaseDate"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Student" package="com.mycompany.librarysystem" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="id" type="String" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="address" type="String" visibility="private"/>
+        <Field name="birthDate" type="String" visibility="private"/>
+        <Field name="major" type="String" visibility="private"/>
+        <Field name="currentLoans" type="List&lt;Loan&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="birthDate"/>
+          <Argument type="String" name="major"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="borrowBook" returnType="void" visibility="public">
+          <Argument type="Book" name="book"/>
+        </Method>
+        <Method name="returnBook" returnType="void" visibility="public">
+          <Argument type="Book" name="book"/>
+        </Method>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="String" name="address"/>
+        </Method>
+        <Method name="getBirthDate" returnType="String" visibility="public"/>
+        <Method name="setBirthDate" returnType="void" visibility="public">
+          <Argument type="String" name="birthDate"/>
+        </Method>
+        <Method name="getMajor" returnType="String" visibility="public"/>
+        <Method name="setMajor" returnType="void" visibility="public">
+          <Argument type="String" name="major"/>
+        </Method>
+        <Method name="getCurrentLoans" returnType="List&lt;Loan&gt;" visibility="public"/>
+        <Method name="setCurrentLoans" returnType="void" visibility="public">
+          <Argument type="List&lt;Loan&gt;" name="currentLoans"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="com.mycompany.librarysystem.Magazine" target="com.mycompany.librarysystem.Book"/>
+    <UseRelation source="com.mycompany.librarysystem.Loan" target="com.mycompany.librarysystem.Book" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="author" source="com.mycompany.librarysystem.Book" target="com.mycompany.librarysystem.Author" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.mycompany.librarysystem.Librarian" target="com.mycompany.librarysystem.Student" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="librarian" source="com.mycompany.librarysystem.LibrarySystem" target="com.mycompany.librarysystem.Librarian" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="currentLoans" source="com.mycompany.librarysystem.Student" target="com.mycompany.librarysystem.Loan" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Loan&gt;"/>
+    <IsRelation name="is" source="com.mycompany.librarysystem.Journal" target="com.mycompany.librarysystem.Book"/>
+    <UseRelation source="com.mycompany.librarysystem.Student" target="com.mycompany.librarysystem.Loan" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.mycompany.librarysystem.Book" target="com.mycompany.librarysystem.Display"/>
+    <UseRelation source="com.mycompany.librarysystem.Librarian" target="com.mycompany.librarysystem.Book" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="book" source="com.mycompany.librarysystem.Loan" target="com.mycompany.librarysystem.Book" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.mycompany.librarysystem.Student" target="com.mycompany.librarysystem.Book" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.mycompany.librarysystem.Book" target="com.mycompany.librarysystem.Author" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
