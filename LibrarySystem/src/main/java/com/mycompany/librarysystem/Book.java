@@ -9,7 +9,7 @@ public abstract class Book implements Display {
     private String publicationDate;
     private boolean isLoaned;
 
-    // Constructor
+    
     public Book(String title, Author author, String number, String genre, String version, String publicationDate) {
         this.title = title;
         this.author = author;
