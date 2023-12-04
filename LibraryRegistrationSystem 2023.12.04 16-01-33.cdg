@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="LibraryRegistrationSystem">
+  <ClassDiagramComponents>
+    <Class name="Author" package="com.mycompany.libraryregistrationsystem" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="Id" type="int" visibility="private"/>
+        <Field name="Name" type="String" visibility="private"/>
+        <Field name="Address" type="String" visibility="private"/>
+        <Field name="BirthDate" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="Id"/>
+          <Argument type="String" name="Name"/>
+          <Argument type="String" name="Address"/>
+          <Argument type="String" name="BirthDate"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="Id"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="Name"/>
+        </Method>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="String" name="Address"/>
+        </Method>
+        <Method name="getBirthDate" returnType="String" visibility="public"/>
+        <Method name="setBirthDate" returnType="void" visibility="public">
+          <Argument type="String" name="BirthDate"/>
+        </Method>
+        <Method name="inLoan" returnType="boolean" visibility="public"/>
+        <Method name="getInfo" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Books" package="com.mycompany.libraryregistrationsystem" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="Title" type="String" visibility="private"/>
+        <Field name="Author" type="String" visibility="private"/>
+        <Field name="No" type="int" visibility="private"/>
+        <Field name="Genre" type="String" visibility="private"/>
+        <Field name="version" type="String" visibility="private"/>
+        <Field name="date" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="Title"/>
+          <Argument type="String" name="Author"/>
+          <Argument type="int" name="No"/>
+          <Argument type="String" name="Genre"/>
+          <Argument type="String" name="version"/>
+          <Argument type="int" name="date"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTitle" returnType="String" visibility="public"/>
+        <Method name="setTitle" returnType="void" visibility="public">
+          <Argument type="String" name="Title"/>
+        </Method>
+        <Method name="getAuthor" returnType="String" visibility="public"/>
+        <Method name="setAuthor" returnType="void" visibility="public">
+          <Argument type="String" name="Author"/>
+        </Method>
+        <Method name="getNo" returnType="int" visibility="public"/>
+        <Method name="setNo" returnType="void" visibility="public">
+          <Argument type="int" name="No"/>
+        </Method>
+        <Method name="getGenre" returnType="String" visibility="public"/>
+        <Method name="setGenre" returnType="void" visibility="public">
+          <Argument type="String" name="Genre"/>
+        </Method>
+        <Method name="getVersion" returnType="String" visibility="public"/>
+        <Method name="setVersion" returnType="void" visibility="public">
+          <Argument type="String" name="version"/>
+        </Method>
+        <Method name="getDate" returnType="int" visibility="public"/>
+        <Method name="setDate" returnType="void" visibility="public">
+          <Argument type="int" name="date"/>
+        </Method>
+        <Method name="inLoan" returnType="boolean" visibility="public"/>
+        <Method name="getInfo" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Display" package="com.mycompany.libraryregistrationsystem" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Methods>
+        <Method name="getInfo" returnType="String" visibility="public"/>
+        <Method name="inLoan" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="Journals" package="com.mycompany.libraryregistrationsystem" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="ConferenceName" type="String" visibility="private"/>
+        <Field name="ConferenceNo" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="ConferenceName"/>
+          <Argument type="int" name="ConferenceNo"/>
+          <Argument type="String" name="Title"/>
+          <Argument type="String" name="Author"/>
+          <Argument type="int" name="No"/>
+          <Argument type="String" name="Genre"/>
+          <Argument type="String" name="version"/>
+          <Argument type="int" name="date"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getConferenceName" returnType="String" visibility="public"/>
+        <Method name="setConferenceName" returnType="void" visibility="public">
+          <Argument type="String" name="ConferenceName"/>
+        </Method>
+        <Method name="getConferenceNo" returnType="int" visibility="public"/>
+        <Method name="setConferenceNo" returnType="void" visibility="public">
+          <Argument type="int" name="ConferenceNo"/>
+        </Method>
+        <Method name="inLoan" returnType="boolean" visibility="public"/>
+        <Method name="getInfo" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LibrarySystem" package="com.mycompany.libraryregistrationsystem" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Magazines" package="com.mycompany.libraryregistrationsystem" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="issueNo" type="int" visibility="private"/>
+        <Field name="releaseDate" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="issueNo"/>
+          <Argument type="int" name="releaseDate"/>
+          <Argument type="String" name="Title"/>
+          <Argument type="String" name="Author"/>
+          <Argument type="int" name="No"/>
+          <Argument type="String" name="Genre"/>
+          <Argument type="String" name="version"/>
+          <Argument type="int" name="date"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getIssueNo" returnType="int" visibility="public"/>
+        <Method name="setIssueNo" returnType="void" visibility="public">
+          <Argument type="int" name="issueNo"/>
+        </Method>
+        <Method name="getReleaseDate" returnType="int" visibility="public"/>
+        <Method name="setReleaseDate" returnType="void" visibility="public">
+          <Argument type="int" name="releaseDate"/>
+        </Method>
+        <Method name="inLoan" returnType="boolean" visibility="public"/>
+        <Method name="getInfo" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Students" package="com.mycompany.libraryregistrationsystem" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="ID" type="int" visibility="private"/>
+        <Field name="Name" type="String" visibility="private"/>
+        <Field name="Address" type="String" visibility="private"/>
+        <Field name="BirthDate" type="String" visibility="private"/>
+        <Field name="Major" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="ID"/>
+          <Argument type="String" name="Name"/>
+          <Argument type="String" name="Address"/>
+          <Argument type="String" name="BirthDate"/>
+          <Argument type="String" name="Major"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getID" returnType="int" visibility="public"/>
+        <Method name="setID" returnType="void" visibility="public">
+          <Argument type="int" name="ID"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="Name"/>
+        </Method>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="String" name="Address"/>
+        </Method>
+        <Method name="getBirthDate" returnType="String" visibility="public"/>
+        <Method name="setBirthDate" returnType="void" visibility="public">
+          <Argument type="String" name="BirthDate"/>
+        </Method>
+        <Method name="getMajor" returnType="String" visibility="public"/>
+        <Method name="setMajor" returnType="void" visibility="public">
+          <Argument type="String" name="Major"/>
+        </Method>
+        <Method name="inLoan" returnType="boolean" visibility="public"/>
+        <Method name="getInfo" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="com.mycompany.libraryregistrationsystem.Journals" target="com.mycompany.libraryregistrationsystem.Books"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.mycompany.libraryregistrationsystem.Author" target="com.mycompany.libraryregistrationsystem.Display"/>
+    <IsRelation name="is" source="com.mycompany.libraryregistrationsystem.Magazines" target="com.mycompany.libraryregistrationsystem.Books"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.mycompany.libraryregistrationsystem.Books" target="com.mycompany.libraryregistrationsystem.Display"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.mycompany.libraryregistrationsystem.Magazines" target="com.mycompany.libraryregistrationsystem.Display"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.mycompany.libraryregistrationsystem.Journals" target="com.mycompany.libraryregistrationsystem.Display"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.mycompany.libraryregistrationsystem.Students" target="com.mycompany.libraryregistrationsystem.Display"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
