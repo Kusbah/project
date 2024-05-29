@@ -1,0 +1,29 @@
+{% extends "courseApp/main.html" %}
+{% load static %}
+
+{% block content %}
+<form action="" method="POST">
+    <div class="container mt-5 mb-3">
+        <div class="row">
+            <div class="col-12">
+    {% csrf_token %}
+    {{ form.name.label }}
+    {{ form.name }}
+    <br>
+    {{ form.username.label }}
+    {{ form.username }}
+    <br>
+    {{ form.email.label }}
+    {{ form.email }}
+    <br>
+    {{ form.password.label }}
+    {{ form.password }}
+    <br>
+            </div>
+        </div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary ms-5">Create</button>
+
+    {{ form.errors }}
+{% endblock content %}
